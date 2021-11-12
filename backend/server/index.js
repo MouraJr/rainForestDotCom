@@ -17,7 +17,7 @@ app.get('/men', async (req, res) => {
     res.set('content-type', 'application/json');
     res.status(200)
     res.send(JSON.stringify(mensData.rows))
-});
+})
 
 //read all women products
 app.get('/women', async (req, res) => {
