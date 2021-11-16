@@ -6,7 +6,7 @@ const Category = ({ data }) => {
         return 'Loading...'
     }
 
-    console.log(data);
+    // console.log(data);
 
     return (
         <div className='row justify-content-center'>
