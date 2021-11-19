@@ -7,7 +7,6 @@ import CartModal from './components/Cart/CartModal'
 import Home from './components/Home/Home';
 import FrontPage from './components/FrontPage/FrontPage'
 import { CartProvider } from 'react-use-cart';
-import Searchbar from './components/Searchbar';
 
 import { fetchData } from './data'
 import Categories from './components/Categories/Categories';
