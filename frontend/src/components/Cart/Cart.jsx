@@ -46,7 +46,7 @@ const Cart = () => {
                         <h2>Total Price: ${cartTotal.toFixed(2)}</h2>
                     </div>
                     <div className='col-auto'>
-                        <button className='btn btn-outline-danger m-2' btn btn-danger m-2 onClick={() => emptyCart()}> Clear Cart </button>
+                        <button className='btn btn-outline-danger m-2' onClick={() => emptyCart()}> Clear Cart </button>
                     </div>
                 </div>
                 <button className='btn btn-secondary'>Buy Now</button>

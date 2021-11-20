@@ -5,7 +5,6 @@ import { Trash } from 'react-bootstrap-icons';
 import { useCart } from 'react-use-cart';
 import CartButton from './CartButton';
 import './CartButton.css'
-import Searchbar from '../Searchbar';
 
 const CartModal = () => {
 
@@ -27,12 +26,11 @@ const CartModal = () => {
 
   return (
     <>
-    <div className='button-right'>
-      <Searchbar />
-      <Button variant="dark" onClick={handleShow}>
-        <CartButton />
-      </Button>
-    </div>
+      <div className='button-right'>
+        <Button variant="dark" onClick={handleShow}>
+          <CartButton />
+        </Button>
+      </div>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

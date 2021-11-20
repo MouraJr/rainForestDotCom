@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Cart from './components/Cart/Cart';
@@ -49,7 +48,6 @@ class App extends React.Component {
         {this.state.loggedIn ?
           <CartProvider>
             <CartModal />
-            {/* <Searchbar /> */}
             {this.state.visible ?
               <Categories handleCategoryClick={this.handleCategoryClick} />
               : <>
