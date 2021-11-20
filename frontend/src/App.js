@@ -54,7 +54,7 @@ class App extends React.Component {
       <div className="App">
         {this.state.loggedIn ?
           <CartProvider>
-            <MainNavbar handleCategoryButton={this.handleCategoryButton} />
+            <MainNavbar handleCategoryButton={this.handleCategoryButton} username={username} />
 
             {this.state.visible ?
               <Categories username={username} handleCategoryClick={this.handleCategoryClick} />

@@ -3,13 +3,17 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import CartModal from '../Cart/CartModal'
 
-const MainNavbar = ({ handleCategoryButton }) => {
+const MainNavbar = ({ handleCategoryButton, username }) => {
 
     const handleClick = () => handleCategoryButton();
 
+    if (!username) {
+        username = 'Guest';
+    }
+
     return (
         <Navbar bg="light" expand="lg" className="d-flex">
-            <Navbar.Brand href="/" className="ms-4">Rainforest</Navbar.Brand>
+            <Navbar.Brand href="/" className="ms-4">Hi {username}, Welcome to Rainforest!</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto h3">
