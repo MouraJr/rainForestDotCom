@@ -18,7 +18,7 @@ const Cart = () => {
     return (
         <section className='p-4 container'>
             <div className='row justify-content-center align-content-center'>
-                <div className='col-12'>
+                <div className='col-12 p-0'>
                     <h5>Cart ({totalUniqueItems}) total Items: ({totalItems}) </h5>
                     <table className='table table-light table-hover m-0'>
                         <tbody>
@@ -41,15 +41,15 @@ const Cart = () => {
                         </tbody>
                     </table>
                 </div>
-                <div className="container">
+                <div className="bg-white">
                     <div className='col-auto ms-auto'>
                         <h2>Total Price: ${cartTotal.toFixed(2)}</h2>
                     </div>
                     <div className='col-auto'>
                         <button className='btn btn-outline-danger m-2' onClick={() => emptyCart()}> Clear Cart </button>
                     </div>
+                    <button className='btn btn-secondary w-100 mb-3'>Buy Now</button>
                 </div>
-                <button className='btn btn-secondary'>Buy Now</button>
             </div>
         </section>
     );

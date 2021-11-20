@@ -18,6 +18,7 @@ class App extends React.Component {
     visible: true,
     itemCount: 29,
     username: 'Guest',
+    quantity: 0,
   }
 
   async componentDidMount() {
@@ -51,21 +52,23 @@ class App extends React.Component {
     const { username } = this.state;
 
     return (
-      <div className="App">
-        {this.state.loggedIn ?
-          <CartProvider>
-            <MainNavbar handleCategoryButton={this.handleCategoryButton} username={username} />
+      <div className="cover-shadow">
+        <div className="App">
+          {this.state.loggedIn ?
+            <CartProvider>
+              <MainNavbar handleCategoryButton={this.handleCategoryButton} username={username} />
 
-            {this.state.visible ?
-              <Categories username={username} handleCategoryClick={this.handleCategoryClick} />
-              : <>
-                <Home data={data} category={category} />
-                <Cart />
-              </>
-            }
-          </CartProvider>
-          : <FrontPage handleLogin={this.handleLogin} />
-        }
+              {this.state.visible ?
+                <Categories username={username} handleCategoryClick={this.handleCategoryClick} />
+                : <>
+                  <Home data={data} category={category} />
+                  <Cart />
+                </>
+              }
+            </CartProvider>
+            : <FrontPage handleLogin={this.handleLogin} />
+          }
+        </div>
       </div>
     );
   }
