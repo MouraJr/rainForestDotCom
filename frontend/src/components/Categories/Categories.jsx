@@ -2,9 +2,10 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import './categories.css'
 
-const Categories = ({ handleCategoryClick }) => {
+const Categories = ({ handleCategoryClick, username }) => {
 
     const handleClick = (e) => handleCategoryClick(e.currentTarget.childNodes[0].innerText);
+    console.log(username)
 
     return (
         <div className="row justify-content-center overflow-hidden text-white">

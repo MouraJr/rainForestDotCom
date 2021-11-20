@@ -2,13 +2,13 @@ import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Cart from './components/Cart/Cart';
-import CartModal from './components/Cart/CartModal'
 import Home from './components/Home/Home';
-import FrontPage from './components/FrontPage/FrontPage'
+import FrontPage from './components/FrontPage/FrontPage';
 import { CartProvider } from 'react-use-cart';
 
-import { fetchData } from './data'
+import { fetchData } from './data';
 import Categories from './components/Categories/Categories';
+import MainNavbar from './components/MainNavbar/MainNavbar';
 
 class App extends React.Component {
   state = {
@@ -17,6 +17,7 @@ class App extends React.Component {
     category: '',
     visible: true,
     itemCount: 29,
+    username: 'Guest',
   }
 
   async componentDidMount() {
@@ -35,21 +36,28 @@ class App extends React.Component {
     this.setState({ visible: false })
   }
 
-  handleLogin = async () => {
+  handleLogin = async (username) => {
     this.setState({ loggedIn: true })
+    this.setState({ username: username })
+  }
+
+  handleCategoryButton = async () => {
+    this.setState({ visible: true })
   }
 
   render() {
     const { data } = this.state;
-    const { category } = this.state
+    const { category } = this.state;
+    const { username } = this.state;
 
     return (
       <div className="App">
         {this.state.loggedIn ?
           <CartProvider>
-            <CartModal />
+            <MainNavbar handleCategoryButton={this.handleCategoryButton} />
+
             {this.state.visible ?
-              <Categories handleCategoryClick={this.handleCategoryClick} />
+              <Categories username={username} handleCategoryClick={this.handleCategoryClick} />
               : <>
                 <Home data={data} category={category} />
                 <Cart />
