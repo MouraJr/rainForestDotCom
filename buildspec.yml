@@ -9,15 +9,15 @@ phases:
       - echo Installing NPM...
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
       - nvm use 14
-    pre_build:
-      commands:
-        - echo Installing dependencies...
-        - npm install
-    build:
-      commands:
-        # Test
-        - echo Building...
-        - npm run build
+  pre_build:
+    commands:
+      - echo Installing dependencies...
+      - npm install
+  build:
+    commands:
+      # Test
+      - echo Building...
+      - npm run build
 artifacts:
   files:
     - '**/*'
