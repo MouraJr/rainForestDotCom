@@ -18,8 +18,9 @@ phases:
       # Test
       - echo Building...
       - npm run build
+      - ls
 artifacts:
   files:
-    - 'frontend/**/*'
+    - '**/*'
   discard-paths: no
   base-directory: build
