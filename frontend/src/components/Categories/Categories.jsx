@@ -11,7 +11,7 @@ const Categories = ({ handleCategoryClick, username }) => {
         <div className="row justify-content-center overflow-hidden text-white">
             <Card
                 border="success"
-                className="p-0 card-categories men-category my-4 col-10 col-md-8 col-lg-3 shadow category-cards"
+                className="p-0 card-categories men-category mx-md-3 my-4 col-10 col-md-6 col-lg-3 shadow"
                 onClick={handleClick} >
                 <div className="shadow-categories">
                     <Card.Body className="d-flex justify-content-center align-items-center h-100">
