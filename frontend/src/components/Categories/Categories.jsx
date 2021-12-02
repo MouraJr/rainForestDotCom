@@ -5,7 +5,7 @@ import './categories.css'
 const Categories = ({ handleCategoryClick, username }) => {
 
     const handleClick = (e) => handleCategoryClick(e.currentTarget.childNodes[0].innerText);
-    console.log(username)
+    // console.log(username)
 
     return (
         <div className="row justify-content-center overflow-hidden text-white">
