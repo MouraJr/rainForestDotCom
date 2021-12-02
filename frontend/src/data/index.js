@@ -2,7 +2,7 @@ import axios from 'axios';
 require('dotenv').config({ path: '../../../.env' });
 
 // const url = 'https://3.140.201.84:5000/';
-const url = process.env.URL || 'https://rainforest.ga';
+const url = process.env.URL || 'https://rainforest.ga/';
 
 export const fetchData = async (category) => {
     let dataUrl = `${url}`
