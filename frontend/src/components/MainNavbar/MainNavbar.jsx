@@ -13,11 +13,11 @@ const MainNavbar = ({ handleCategoryButton, username }) => {
 
     return (
         <Navbar bg="light" expand="lg" className="d-flex">
-            <Navbar.Brand href="/" className="ms-4">Hi {username}, Welcome to Rainforest!</Navbar.Brand>
+            <Navbar.Brand href="/index.html" className="ms-4">Hi {username}, Welcome to Rainforest!</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto h3">
-                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/index.html">Home</Nav.Link>
                     <Nav.Link onClick={handleClick}>Categories</Nav.Link>
                 </Nav>
                 <CartModal />
