@@ -2,7 +2,7 @@ import axios from 'axios';
 require('dotenv').config({ path: '../../../.env' });
 
 // const url = 'http://3.140.201.84:5000/';
-const url = process.env.URL || 'http://3.140.201.84:5000/';
+const url = process.env.URL || 'http://localhost:4000/';
 
 export const fetchData = async (category) => {
     let dataUrl = `${url}`
