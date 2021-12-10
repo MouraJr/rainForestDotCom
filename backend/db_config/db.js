@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 require('dotenv/config');
 
 //assign the MongoDB connection string to a constant
-var uri = process.env.DB_CONNECTION //|| "mongodb+srv://rainforest:ADMIN@rainforest.tuqge.mongodb.net/rainForest?retryWrites=true&w=majority";
+var uri = process.env.DB_CONNECTION;
 
 //declare and assign optional settings
 const options = {
